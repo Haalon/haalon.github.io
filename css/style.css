@@ -1,0 +1,30 @@
+.head {
+  background: linear-gradient( #000, #000 80% , rgba(11,11,11,.4) );
+}
+
+.showcase {
+  padding: 10rem 0;
+  background: linear-gradient(rgba(11,11,11,.4) , rgba(0,0,0,.85) 25%, rgba(0,0,0,.85) 75%, rgba(11,11,11,.4) );
+}
+
+
+
+body {
+  font-family: 'Nunito';
+  letter-spacing: 0.0625em;
+  background:  url(../img/bckg.jpg);
+  background-repeat: repeat;
+}
+
+a {
+  color: #64a19d;
+}
+
+a:focus, a:hover {
+  text-decoration: none;
+  color: #3c6360;
+}
+
+.bg-black {
+  background-color: #161616 !important;
+}
