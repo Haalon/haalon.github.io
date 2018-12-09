@@ -7,7 +7,18 @@
   background: linear-gradient(rgba(11,11,11,.4) , rgba(0,0,0,.85) 25%, rgba(0,0,0,.85) 75%, rgba(11,11,11,.4) );
 }
 
-
+.gif::before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  content: '';
+  z-index: 100;
+  background: url(http://www.slatecube.com/images/play-btn.png) no-repeat center;
+  background-size: 20%;
+  pointer-events: none;
+}
 
 body {
   font-family: "Trebuchet MS", sans-serif;
