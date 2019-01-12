@@ -8,6 +8,7 @@
 }
 
 .gif-off::before {
+  z-index: 2;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -37,6 +38,14 @@ a:focus, a:hover {
   background-color: #161616 !important;
 }
 
+.img-fluid {
+  transition: all 0.3s;
+}
+
+.img-fluid:hover {
+  z-index: 1;
+  transform: scale(1.1);
+}
 .loader {
 position: absolute;
   border: 16px solid #f3f3f3; /* Light grey */
