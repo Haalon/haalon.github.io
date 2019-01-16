@@ -8,6 +8,7 @@
 }
 
 .gif-off::before {
+  left: 0px;
   z-index: 2;
   position: absolute;
   height: 100%;
@@ -34,11 +35,17 @@ a:focus, a:hover {
   color: #3c6360;
 }
 
+section {
+  position: relative;
+  z-index: 0;
+}
+
 .bg-black {
   background-color: #161616 !important;
 }
 
 .img-fluid {
+  position: relative;
   transition: all 0.3s;
 }
 
@@ -47,7 +54,7 @@ a:focus, a:hover {
   transform: scale(1.05);
 }
 .loader {
-position: absolute;
+  position: absolute;
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid #fff; 
   border-radius: 50%;
@@ -97,4 +104,8 @@ position: absolute;
 .icon:hover{
   opacity: 0.8;
   transform: scale(1.05);
+}
+
+.row > div {
+  text-align: center;
 }
