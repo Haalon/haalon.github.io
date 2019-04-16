@@ -45,7 +45,7 @@ section {
 }
 
 .img-fluid {
-  position: relative;
+  /*position: relative;*/
   transition: all 0.3s;
 }
 
