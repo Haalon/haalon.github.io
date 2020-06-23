@@ -20,6 +20,9 @@
   pointer-events: none;
 }
 
+.img-pixel {
+  image-rendering: crisp-edges;
+}
 
 body {
   font-family: "Trebuchet MS", sans-serif;
