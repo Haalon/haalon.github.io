@@ -1,23 +1,16 @@
 .head {
-  background: linear-gradient( #000, #000 80% , rgba(11,11,11,.4) );
+  background: linear-gradient(#000, #000 80%, rgba(11, 11, 11, 0.4));
 }
 
 .showcase {
   padding: 10rem 0;
-  background: linear-gradient(rgba(11,11,11,.0) , rgba(11,11,11,.85) 10%, rgba(0,0,0,.95) 50%, rgba(11,11,11,.85) 90%, rgba(11,11,11,.0) );
-}
-
-.gif::before {
-  right: -10px;
-  bottom: 0px;
-  z-index: 2;
-  position: absolute;
-  height: 20%;
-  width: 20%;
-  content: '';
-  background: url(../img/redirect-btn.png) no-repeat center;
-  background-size: 60%;
-  pointer-events: none;
+  background: linear-gradient(
+    rgba(11, 11, 11, 0),
+    rgba(11, 11, 11, 0.85) 10%,
+    rgba(0, 0, 0, 0.95) 50%,
+    rgba(11, 11, 11, 0.85) 90%,
+    rgba(11, 11, 11, 0)
+  );
 }
 
 .img-pixel {
@@ -27,7 +20,7 @@
 body {
   font-family: "Trebuchet MS", sans-serif;
   letter-spacing: 0.0625em;
-  background:  url(../img/bckg.jpg), black;
+  background: url(../img/bckg.jpg), black;
   background-repeat: repeat;
 }
 
@@ -35,7 +28,8 @@ a {
   color: #64a19d;
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
   text-decoration: none;
   color: #3c6360;
 }
@@ -45,80 +39,58 @@ section {
   z-index: 0;
 }
 
+.blur-preview {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.blur-preview > img {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out, transform 300ms;
+}
+
+.blur-preview.loaded > img {
+  opacity: 1;
+}
+
+[data-link] {
+  cursor: pointer;
+}
+
 .bg-black {
   background-color: #161616 !important;
 }
 
 .img-fluid {
-  /*position: relative;*/
-  transition: all 0.3s;
+  position: relative;
 }
 
 .img-fluid:hover {
   z-index: 1;
   transform: scale(1.05);
 }
-.loader {
-  position: absolute;
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #fff; 
-  border-radius: 50%;
-  width: 20%;
-  content: '     ';
-  animation: spin 2s linear infinite;
-}
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@media (max-width: 992px) {
-  .social {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (min-width: 992px) {
-  .social {
-    z-index: 100;
-    position: fixed;
-    right: 0.5rem; 
-    top: 1rem;
-  }
-}
-
-.counter {
-    bottom:0;
-    right:0;
+.social {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .icon {
   margin: 0.25rem;
-  opacity: 0.4;
+  opacity: 0.7;
   display: block;
   height: 3rem;
   width: 3rem;
   transition: all 0.3s;
+  background-color: transparent;
 }
 
-@media (max-width: 992px) {
-  .icon {
-    height: 4rem;
-    width: 4rem;
-    margin-top: 6rem;
-    display: inline;
-  }
-}
-.icon:hover{
-  opacity: 0.8;
+.icon:hover {
+  opacity: 1;
   transform: scale(1.05);
 }
-
-.row > div {
-  text-align: center;
-}
-
-
-
